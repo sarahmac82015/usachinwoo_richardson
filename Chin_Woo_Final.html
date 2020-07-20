@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChinWoo_JQueryFunctions</title>
+    <style type="text/css">
+    body{
+        margin:0px;
+        padding:0px;
+    }
+    #container{
+        height:1300px;
+        width:1000px;
+        background-color:black;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    #Header{
+        width:970px;
+        height:280px;
+        background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+        padding-top: 20px;
+        padding-left: 20px;
+        border-radius:5px;
+    }
+    #topheader{
+        width:960px;
+        height:300px;
+        margin-top:40px;
+        margin-left:10px;
+        margin-bottom:10px;
+    }
+    #topHeaderleft{
+        display:inline-block;
+        width:200px;
+        margin-right:10px;
+        vertical-align:top;
+    }
+    #topHeadercenter{
+        display:inline-block;
+        width:400px;
+        margin-right:10px;
+        vertical-align:top;
+    }
+    #topHeaderright{
+        display:inline-block;
+        width:300px;
+        vertical-align:top;
+    }
+    #topHeaderleft img{
+        width:100%;
+        height:100%;
+        border:4px solid black;
+    }
+    #topHeadercenter img{
+        width:100%;
+        height:100%;
+        border:4px solid black;
+    }
+    #topHeaderright img{
+        width:100%;
+        height:100%;
+        border:4px solid black;
+    }
+    #bottomHeader{
+        width:960px;
+        height:90px;
+    }
+    #navbar{
+        background-color:black;
+        display: inline-block;
+        vertical-align:bottom;
+        width:600px;
+        padding:3px;
+        border-radius:8px;
+    }
+    #navbar p{
+        color:yellow;
+        display:inline-block;
+        margin: 15px;
+        font-weight: bold;
+    }
+    #imageholder{
+        display:inline-block;
+        width:300px;
+        vertical-align:top;
+    }
+    #imageholder img{
+        width:20%;
+        height:20%;
+        margin-left:220px;
+    }
+    #Pagebody{
+        margin-top:20px;
+        background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
+        width: 990px;
+        height:500px;
+        border-radius:5px;
+    }
+    #line{
+        display:flex;
+        justify-content:center;
+        margin-bottom:0px;
+        width:990px;
+        height:60px;
+        vertical-align:top;
+    }
+    #line h1{
+        margin:0px;
+    }
+    #topbody{
+        height:200px;
+        width:990px;
+    }
+    #topleft{
+        background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+        background-blend-mode: screen;
+        display:inline-block;
+        vertical-align:top;
+        width:310px;
+        height:190px;
+        margin-left:12px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    #toggle img{
+        width:100%;
+        height:100%;
+    }
+    #topcenter{
+        background-color:rgb(15, 90, 228);
+        display:inline-block;
+        vertical-align:top;
+        width:310px;
+        height:190px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    .hidden img{
+        width:65%;
+        height:65%;
+    }
+    #topright{
+        background-color:rgba(8, 184, 8, 0.938);
+        display:inline-block;
+        vertical-align:top;
+        width:300px;
+        height:190px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    #slideUp img{
+        width:65%;
+        height:65%;
+    }
+    #middlebody{
+        height:220px;
+        width:990px;
+        margin-top:15px;
+    }
+    #middleleft{
+        display:inline-block;
+        vertical-align:top;
+        width:310px;
+        height:210px;
+        margin-left:12px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    #slideToggle img{
+        height:65%;
+        width:65%;
+    }
+    #middlecenter{
+        display:inline-block;
+        vertical-align:top;
+        width:310px;
+        height:210px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    #fadeIn img{
+        width:100%;
+        height:100%;
+    }
+    #middleright{
+        display:inline-block;
+        vertical-align:top;
+        width:300px;
+        height:210px;
+        margin-right:12px;
+        border:2px solid black;
+        border-radius:5px;
+    }
+    #fadeOut img{
+        width:65%;
+        height:65%;
+    }
+    #Footer{
+        margin-top:12px;
+        background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
+        width: 990px;
+        height:455px;
+        border-radius:5px;
+    }
+    #topFooter{
+        height:220px;
+    }
+    #topFooterleft{
+        width:310px;
+        height:218px;
+        display:inline-block;
+    }
+    #topFootercenter{
+        width:310px;
+        height:218px;
+        display:inline-block;
+    }
+    #topFooterright{
+        width:310px;
+        height:218px;
+        display:inline-block;
+    }
+    #html img{
+        width:25%;
+        height:25%;
+    }
+    #bottomFooter{
+        height:180px;
+        margin-top:0px;
+    }
+    #bottomFooterleft{
+        margin-top:0px;
+        width:310px;
+        height:178px;
+        display:inline-block;
+    }
+    #bottomFooterleft img{
+        width:100%;
+        height:100%;
+    }
+    #bottomFootercenter{
+        margin-top:0px;
+        width:310px;
+        height:178px;
+        display:inline-block;
+    }
+    #bottomFooterright{
+        margin-top:0px;
+        width:350px;
+        height:178px;
+        display:inline-block;
+    }
+    #bottomFooterright h4{
+        margin-top:0px;
+    }
+        
+    </style>
+    <script type= "text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script type ="text/javascript">
+    $(document).ready(function(){
+
+        $('#vote').submit(function(event){
+            event.preventDefault()
+            alert("Thank you for your vote!");
+        })
+        $('#showButton').click(function(){
+            $("#toggle").show()
+        })
+        $("#hideButton").click(function(){
+            $("#toggle").hide()
+        })
+        $('.slideDown').click(function(){
+			$(".hidden").slideDown()
+		})
+        $('.slideUp').click(function(){
+			$("#slideUp").slideUp()
+        })
+        $('.slideToggle').click(function(){
+			$("#slideToggle").slideToggle()
+		})
+        $('.fadeIn').click(function(){
+			$("#fadeIn").fadeIn()
+        })
+        $('.fadeOut').click(function(){
+			$("#fadeOut").fadeOut()
+		})
+        $('.after').click(function(){
+		    $("#after").after("<h4>Try your first 3 classes for just $20. Includes uniform!</h4>")
+        })
+        $('.text').click(function(){
+			$("#text").text("much learning")
+		})
+        $('.html').click(function(){
+			$("#html").html("<h1>Master</h1>")
+        })
+        $('.append').click(function(){
+			$("#append").append("<span>jkwongacademyinfo@gmail.com</span>")
+        })
+    })
+    </script>
+    
+</head>
+<body>
+    <div id="container">
+        <div id="Header">
+            <div id= "topHeader">
+                <div id="topHeaderleft">
+                    <img src="./images1/Richard.jpg">
+                </div>
+                <div id="topHeadercenter">
+                    <img src="./images1/2016_ChinWoo_Grapevine.JPG">
+                </div>
+                <div id="topHeaderright">
+                    <img src="./images1/Kids_pole.jpg">
+                </div>
+            </div>
+            <div id="bottomHeader">
+                <div id="navbar">
+                    <p>Forms</p>
+                    <p>Weapons</p>
+                    <p>Special Events</p>
+                    <p>Competitions</p>
+                    <p>Spirit and Family</p>
+                </div>
+                <div id= "imageholder">
+                    <img src= "./images1/USA_chinwoo.JPG">
+                </div>
+            </div>
+        </div>
+        <div id="Pagebody">
+            <div id= "line"><img src="./images1/ribbon_left.png"><h1>JK Wong Kung Fu Taichi</h1><img src="./images1/ribbon_right.png"></div>
+            <div id="topbody">
+                <div id="topleft">
+                    <button id="showButton">Show Chinese New Year</button>
+                    <button id="hideButton">Hide Chinese New Year</button>
+                    <p id="toggle"> <img src="./images1/newyear.JPG"></p>
+                </div>
+                <div id="topcenter">
+                    <p class="hidden" hidden><img src="./images1/liam4.jpg"></p>
+		            <button class="slideDown">Spear</button>
+                </div>
+                <div id="topright">
+                    <p id="slideUp"><img src="./images1/paolo.jpg"></p>
+		            <button class="slideUp">Broadsword</button>
+                </div>
+            </div>
+            <div id="middlebody">
+                <div id="middleleft"> 
+                    <p id="slideToggle"><img src="./images1/liam2.jpg"></p>
+		            <button class="slideToggle">Jeet Kune</button>
+                </div>
+                <div id="middlecenter">
+                    <p id="fadeIn" hidden><img src="./images1/now.JPG"></p>
+		            <button class="fadeIn">Online Classes Available</button>
+                </div>
+                <div id="middleright">
+                    <p id="fadeOut"> <img src="./images1/birthday.jpg"></p>
+		            <button class="fadeOut">Family</button>
+                </div>
+            </div>
+        </div>
+        <div id="Footer">
+            <div id="topFooter">
+                <div id="topFooterleft">
+                    <p id="after">Come in today to try a class!</p>
+		            <button class="after">Click here to find out more</button>
+                </div>
+                <div id="topFootercenter">
+                    <p id="text">Through discipline and practice you will</p>
+		            <button class="text">Achieve</button>
+                </div>
+                <div id="topFooterright">
+                    <p>It's your time to feel like a</p>
+		            <div id="html"><img src="./images1/xu_huihui.JPG"></div>
+		            <button class="html">kung fu</button>
+                </div>
+            </div>
+            <div id="bottomFooter">
+                <div id="bottomFooterleft">
+                    <img src="./images1/specevents1.jpg">
+                </div>
+                <div id="bottomFootercenter">
+                    <p>Book a lion dance performance with us</p>
+		            <p id="append">214-878-4598</p>
+		            <button class="append">Call today!</button>
+                </div>
+                <div id="bottomFooterright">
+                    <h4>Vote For Your Favorite Kung Fu Actor</h4>
+                    <form id="vote" action="">
+                        <input type="radio" name="kungfuartist" id="Jackie Chan">
+                        <label for="Jackie Chan">Jackie Chan</label><br>
+                        <input type="radio" name="kungfuartist" id="Jet Li">
+                        <label for="Jet Li">Jet Li</label><br>
+                        <input type="radio" name="kungfuartist" id="Donnie Yen">
+                        <label for="Donnie Yen">Donnie Yen</label><br>
+                        <input type="radio" name="kungfuartist" id="Sammo Hung">
+                        <label for="Sammo Hung">Sammo Hung</label><br>
+                        <button class="click">Submit Your Vote!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<!--https://youtu.be/p566whv8wzQ-->   <!--1:10-1:15--> <!--0:43-0:48--> <!--0:17-0:22-->
